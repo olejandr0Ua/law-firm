@@ -14,11 +14,10 @@
   &__slider {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* Вмикає горизонтальний скролл */
-    scroll-snap-type: x mandatory; /* Прив'язка скролу до карток */
-    padding-bottom: 20px; /* Місце, щоб тінь карток не обрізалася */
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: 20px; 
     
-    /* Ховаємо дефолтний системний скроллбар для естетики */
     &::-webkit-scrollbar {
       display: none;
     }
@@ -35,12 +34,12 @@
 }
 
 .testimonial-card {
-  flex: 0 0 100%; /* На смартфонах картка займає 100% ширини екрана */
-  max-width: 400px; /* На великих екранах обмежуємо ширину */
+  flex: 0 0 100%; 
+  max-width: 400px; 
   background-color: #f9f9f9;
   padding: 30px;
-  border-left: 4px solid $color-accent; /* Декоративна лінія збоку */
-  scroll-snap-align: center; /* Центрує картку при скролі */
+  border-left: 4px solid $color-accent; 
+  scroll-snap-align: center; 
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 

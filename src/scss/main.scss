@@ -14,8 +14,7 @@ body {
   background-color: $color-bg;
   color: $color-text;
 }
-
-// Загальний контейнер, щоб контент не прилипав до країв екрана       
+ 
 .container {
   max-width: $container-width;
   margin: 0 auto;

@@ -2,25 +2,23 @@
 @use 'sass:color';
 
 .hero {
-  /* Вказуємо шлях до твоєї картинки. 
-     Якщо картинка темна, текст буде видно. Якщо світла - доведеться додавати затемнення */
   background-image: url('../assets/images/hero-bg.jpg'); 
-  background-size: cover;       /* Розтягує фон на весь блок */
-  background-position: center;  /* Центрує картинку */
-  background-repeat: no-repeat; /* Забороняє повторення */
-  background-color: $color-primary; /* Резервний колір, якщо картинка не завантажиться */
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat; 
+  background-color: $color-primary; 
   
-  padding: 120px 0; /* Великі відступи зверху і знизу, щоб блок був високим */
-  text-align: center; /* Центруємо текст всередині */
-  color: #ffffff; /* Білий колір тексту для контрасту з фоном */
+  padding: 120px 0; 
+  text-align: center; 
+  color: #ffffff; 
 
   &__container {
-    max-width: 800px; /* Обмежуємо ширину тексту, щоб він не розтягувався на весь екран і легко читався */
+    max-width: 800px; 
     margin: 0 auto;
   }
 
   &__title {
-    font-size: 48px; /* Розмір головного заголовка (звір з Figma) */
+    font-size: 48px; 
     font-weight: 700;
     margin-bottom: 24px;
     line-height: 1.2;
@@ -30,10 +28,9 @@
     font-size: 18px;
     margin-bottom: 40px;
     line-height: 1.6;
-    opacity: 0.9; /* Робить підзаголовок трохи прозорим */
+    opacity: 0.9; 
   }
 
-  /* Якщо потрібно, щоб кнопка в цій секції трохи відрізнялася від тої, що в хедер */
  &__btn {
     padding: 16px 32px;
     font-size: 18px;

@@ -2,7 +2,7 @@
 
 .services {
   padding: 80px 0;
-  background-color: #f9f9f9; // Світло-сірий фон, щоб відділити секцію (звір з Фігмою)
+  background-color: #f9f9f9; 
 
   &__title {
     text-align: center;
@@ -13,23 +13,20 @@
 
   &__grid {
     display: grid;
-    // Магія Grid: створює колонки шириною мінімум 300px. 
-    // Якщо екран менший - переносить картку на новий рядок.
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px; // Відстань між картками
+    gap: 30px; 
   }
 }
 
-// Окремий компонент картки
 .service-card {
   background-color: $color-bg;
   padding: 40px 30px;
-  border-radius: 8px; // Округлення кутів
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); // Легка тінь
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: translateY(-5px); // Картка трохи підіймається при наведенні
+    transform: translateY(-5px); 
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   }
 
