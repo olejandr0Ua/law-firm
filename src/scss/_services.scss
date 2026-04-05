@@ -1,0 +1,58 @@
+@use 'variables' as *;
+
+.services {
+  padding: 80px 0;
+  background-color: #f9f9f9; // Світло-сірий фон, щоб відділити секцію (звір з Фігмою)
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    color: $color-primary;
+    margin-bottom: 50px;
+  }
+
+  &__grid {
+    display: grid;
+    // Магія Grid: створює колонки шириною мінімум 300px. 
+    // Якщо екран менший - переносить картку на новий рядок.
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; // Відстань між картками
+  }
+}
+
+// Окремий компонент картки
+.service-card {
+  background-color: $color-bg;
+  padding: 40px 30px;
+  border-radius: 8px; // Округлення кутів
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); // Легка тінь
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); // Картка трохи підіймається при наведенні
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  &__title {
+    font-size: 24px;
+    color: $color-primary;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: $color-text;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-accent;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

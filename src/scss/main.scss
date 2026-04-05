@@ -1,0 +1,23 @@
+@use 'variables' as *;
+@use 'header';
+@use 'hero';
+@use 'about';
+@use 'image-block';
+@use 'services';
+@use 'testimonials';
+@use 'cta';
+@use 'footer';
+@use 'reset';
+
+body {
+  font-family: $font-main;
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+// Загальний контейнер, щоб контент не прилипав до країв екрана       
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $padding-mobile;
+}

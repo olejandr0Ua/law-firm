@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+.about {
+  padding: 80px 0; // Відступи зверху та знизу секції
+  background-color: $color-bg; // Основний фон сайту
+
+  &__container {
+    display: flex;
+    justify-content: center; // Центруємо контент по горизонталі
+  }
+
+  &__content {
+    max-width: 700px; // Обмежуємо ширину текстового блоку, щоб він не розтягувався на весь екран
+    text-align: center; // Вирівнювання тексту
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: 16px;
+    color: $color-text;
+    line-height: 1.8; // Збільшуємо міжрядковий інтервал для кращої читабельності
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    // Якщо ця кнопка має виглядати інакше (наприклад, бути білою з синьою рамкою), 
+    // тут потрібно перевизначити її стилі. Наприклад:
+    background-color: transparent;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+  }
+}
+
+@media (max-width: 768px) {
+  .about { padding: 50px 0; } // В _about.scss
+}

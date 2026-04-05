@@ -1,0 +1,75 @@
+@use 'variables' as *;
+
+.header {
+  padding: 20px 0;
+  // Додаємо легку тінь або рамку знизу, щоб відділити шапку від контенту (можеш прибрати, якщо в макеті цього немає)
+  border-bottom: 1px solid #eaeaea; 
+
+  &__container {
+    display: flex;
+    justify-content: space-between; // Розкидає логотип, навігацію і кнопку по краях
+    align-items: center; // Вирівнює їх по вертикальній осі по центру
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-primary;
+  }
+}
+
+// Стилі навігації
+.nav {
+  &__list {
+    display: flex;
+    gap: 40px; // Відстань між пунктами меню
+  }
+
+  &__link {
+    font-weight: 500;
+    transition: color 0.3s ease; // Плавна зміна кольору
+
+    &:hover {
+      color: $color-accent; // Колір при наведенні миші
+    }
+  }
+}
+
+// Стилі кнопки
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: $color-primary;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px; // Округлення кутів (звір з макетом)
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0; // Зменшуємо висоту блоку
+
+    &__title {
+      font-size: 32px; // Менший заголовок
+      margin-bottom: 15px;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    &__btn {
+      padding: 14px 24px;
+      width: 100%; // Кнопка на всю ширину екрана (часто роблять на мобільних)
+      display: block;
+      box-sizing: border-box;
+    }
+  }
+}
